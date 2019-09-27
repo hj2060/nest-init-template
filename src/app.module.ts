@@ -1,10 +1,21 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ControllerModule } from './controllers/controller.module';
+import { APP_INTERCEPTOR } from '@nestjs/core';
+import mysql from './config/mysql';
+import { CommonInterceptor } from './interceptors/common.interceptor';
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    TypeOrmModule.forRoot({
+      ...mysql
+    }),
+    ControllerModule
+  ],
+  providers: [
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: CommonInterceptor
+    }
+  ],
 })
 export class AppModule {}
