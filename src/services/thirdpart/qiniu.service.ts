@@ -3,8 +3,8 @@ import qiniu = require('qiniu')
 import cache = require('memory-cache')
 @Injectable()
 export class QiniuService {
-  private readonly AK = '-iFMuOfo0EfaT3sKyKZWIeWIZSpzZVZSjpjbWoVO'
-  private readonly SK = 's7gw840Fn4osTAWt3oohcHUcJFeYrCg2y1M1ukhp'
+  private readonly AK = ''
+  private readonly SK = ''
   private readonly mac = new qiniu.auth.digest.Mac(this.AK, this.SK)
 
   /**

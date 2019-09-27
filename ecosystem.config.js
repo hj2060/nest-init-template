@@ -13,10 +13,10 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'root',
-      host : '39.97.188.63',
+      user : '',
+      host : '',
       ref  : 'origin/master',
-      repo : 'git@code.aliyun.com:18161518841tb/nest-mba.git',
+      repo : '',
       path : '/www/server',
       'post-deploy' : 'npm install && npm run build && pm2 reload ecosystem.config.js',
       env: {

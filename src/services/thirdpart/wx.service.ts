@@ -8,14 +8,14 @@ export class WxService {
   private readonly http = axios.create({
     baseURL: 'https://api.weixin.qq.com'
   })
-  private readonly APPID = 'wx2e353fbdb44499e8'
-  private readonly SECRET = '24039c1f92ec124954793b1038b57389'
+  private readonly APPID = ''
+  private readonly SECRET = ''
   // 商户号
-  private readonly MCH_ID = '1499876842'
+  private readonly MCH_ID = ''
   // 商户秘钥
-  private readonly MCH_KEY = 'hendongnikeji2016dedongniMBA2018'
+  private readonly MCH_KEY = ''
   // 支付成功的回调地址
-  private readonly notify_url = 'http://api.mba.hendongni.com/app/order/notify'
+  private readonly notify_url = ''
 
   constructor(
     private readonly utils: UtilsService
